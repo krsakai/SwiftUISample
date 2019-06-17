@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct ContentView : View {
+    @EnvironmentObject var appData: AppData
+    
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("ContentView: \(UUID().uuidString)")
+            Text("CounterView ↓")
+            CounterView()
+            Text("CounterButton ↓")
+            CounterButton()
+        }
     }
 }
 
@@ -21,3 +29,4 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
